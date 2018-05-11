@@ -1,18 +1,11 @@
-<html>
+<!DOCTYPE html>
 <head>
     <title>Meme generator app</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-
-    <!-- NEW CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="http://webthemez.com"/>
     <!-- css -->
-
-
-    <!-- ---------------------------------------------------------------------- -->
-
     <style></style>
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -20,8 +13,7 @@
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="colorpicker/spectrum.js"></script>
     <script type="text/javascript" src="jquery.memegenerator.min.js"></script>
-    <!-- 		<script type="text/javascript" src="jquery.memegenerator.pl.js"></script> -->
-
+<!--     		<script type="text/javascript" src="jquery.memegenerator.pl.js"></script>-->
     <link rel="stylesheet" type="text/css" href="jquery.memegenerator.min.css">
     <link rel="stylesheet" type="text/css" href="colorpicker/spectrum.css">
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -195,7 +187,7 @@
         }
 
         .example {
-            margin: 0 0 10% 0;
+            margin: 0 0 25px 0;
         }
 
         .bootstrap {
@@ -245,6 +237,12 @@
 
 <div id="wrapper" class="home-page">
 
+    <section id="banner">
+        <h1 style="color:white; text-align: center"><b>MEME</b></h1>
+        <h2 style="color:white;">"It's not a word, it's a lifestyle."</h2>
+        <p>-urban dictionary</p>
+    </section>
+
     <header>
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -254,48 +252,38 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" style="background: white!important;" href="index.php"><img src="images/mainLogo.png" alt="logo"/></a>
+                    <a class="navbar-brand " href="index.php"><img class="logo-img" src="images/322.png"
+                                                                   alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a class="waves-effect waves-dark" href="index.php">Home</a></li>
-                        <li id="anchorCreate"><a  class="waves-effect waves-dark" href="#creating">Create meme</a></li>
-                        <li><a  class="waves-effect waves-dark" href="about.php">About Us</a></li>
+                        <li><a class="waves-effect waves-dark" href="index.php">HOME</a></li>
+                        <li><a class="waves-effect waves-dark" href="#">TOP MEMES</a></li>
+                        <li><a class="waves-effect waves-dark" href="#">ABOUT US</a></li>
+                        <li><a class="waves-effect waves-dark" href="#">CONTESTS</a></li>
+                        <li><a class="waves-effect waves-dark" href="#">HISTORY</a></li>
+                        <li><a class="waves-effect waves-dark" href="#">BLOG</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="banner">
+    <section class="content container">
+        <div class="row second-content">
+            <h1 class="bottom-heading">H1 GOES HERE</h1>
+            <h3 class="orange-heading">Step one: Choose Your Image</h3>
 
-        <h1 style="color:white; text-align: center"><b>MEME</b></h1>
-        <h1 style="color:white;">"It's not a word, it's a lifestyle."</h1>
-        <p>-urban dictionary</p>
-
-
-    </section>
-
-
-    <section class="content">
-        <div class="container-fluid first-content">
-
-            <h1 style="text-align: center; margin-top:50px">Make your meme</h1>
-            <!-- Link to scroll down to the tutorial -->
-            <p id="scrollDown" style="font-size:18px; text-align: center; margin-bottom:15px;"><a href="#tutorialVideo">
-                    Click to watch a video tutorial first</a></p>
-
-        </div>
-        <div class="container second-content">
             <div class="row1">
-                <div class="col-md-6 " id="creating" style="text-align: center">
+                <div class="col-md-4 " id="creating">
+
                     <form class="sending-form" action="index.php" method="post" enctype="multipart/form-data">
-                        <div class="col-md-10"><br>
+                        <div class="col-md-12"><br>
                             <h2 class="uploadH2"><b>Upload Image</b></h2><br>
                         </div>
 
                         <div class="col-md-4"></div>
-                        <input type="file" name="pic"/>
+                        <input type="file" class="send-btn" name="pic"/>
                         <div class="col-md-4"></div>
                         <button name="submit" class="send-btn">Upload</button>
                     </form>
@@ -334,10 +322,8 @@
 
                     </center>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="track example-5">
+                <div class="track example-5 col-md-8">
                     <div class="inner  first-slider">
                         <div class="view-port">
                             <div id="example-5" class="slider-container">
@@ -410,9 +396,9 @@
                 </div>
             </div>
 
-
+            <h3 class="orange-heading">Step two: Make Your Caption</h3>
             <div class="row appBlock">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="example save">
                         <?php if (!(isset($img))) { ?>
                             <img src="noimage.jpg" id="example-save"/>
@@ -426,36 +412,13 @@
                         </center>
                         <div class="row">
 
-                            <!--<div class="row">
-                                <div class="col-md-12" id="preview"></div>
-                            </div> -->
-                            <!--                <div class="col-md-4"></div>-->
                             <div class="download">
                                 <center>
                                     <button class="btn btn-danger" id="download">Download</button>
                                 </center>
                             </div>
-
-
-                            <div class="row-links">
-                                <a href="https://plus.google.com/share?url=<?php echo "http://userer.com/meme/"; ?>"
-                                   onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img
-                                            src="https://www.gstatic.com/images/icons/gplus-32.png"
-                                            alt="Share on Google+"/></a>
-                                <br>
-
-
-                                <br>
-                                <div class="fb-share-button" data-href="<?php echo "http://userer.com/meme/"; ?>"
-                                     data-layout="button"></div>
-                            </div>
-
                             <center>
-
                             </center>
-
-                            <!--                <div class="col-md-3"></div>-->
-
                         </div>
                     </div>
 
@@ -524,138 +487,191 @@
 
             //
         </script>
-        <div class="container-fluid videoContainer">
+    </section>
+
+    <div class="third-content third-content-container">
+        <div class="container ">
+            <h2 class="bottom-heading">ENTER YOUR MEME INTO OUR CONTEST!</h2>
+            <div class="row contest-parent">
+                <div class="col-md-3 col-sm-12">
+                    <img class="baby-img" src="meme.jpg" alt="Meme Generator App"/>
+                </div>
+
+
+                <div class="col-md-9 contest-text">
+                    <div class="texts row">
+                        <div class="col-md-6">
+                            <p style="margin-top:30px">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p style="margin-top:30px">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </p>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger enter-contest">ENTER CONTEST</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-4">
+        <div class="container">
+            <div class="row container-4">
+                <h2 class="bottom-heading" style="margin-bottom: 30px; margin-top:0">H2 GOES HERE</h2>
+            </div>
             <div class="row">
-                <div class="container">
-                    <!--    <div class="col-md-1">-->
-                    <!--    </div>-->
-                    <!--    <div class="col-md-6">-->
-                    <!---->
-                    <!--        <div class="row">-->
-                    <!--            <div class="col-md-5">-->
-                    <!--                <br>-->
-                    <!---->
-                    <!--                <center>-->
-                    <!--                    <h1>Meme generator app</h1>-->
-                    <!--                </center>-->
-                    <!---->
-                    <!--                <br>-->
-                    <!---->
-                    <!--                <center><img src="meme.jpg" alt="Meme Generator App"/></center>-->
-                    <!--            </div>-->
-                    <!---->
-                    <!---->
-                    <!--            <div class="col-md-6">-->
-                    <!---->
-                    <!--                <b>Main features:</b>-->
-                    <!--                <br><br>-->
-                    <!---->
-                    <!--                <ul>-->
-                    <!---->
-                    <!--                    <li>✓ Choose templates from Multiple meme categories.</li>-->
-                    <!--                    <li>✓ 1000+ high quality memes with lots of example captions to choose from.</li>-->
-                    <!--                    <li>✓ Quickly save memes and Share @ your favorite social media.</li>-->
-                    <!--                    <li>✓ Custom memes supported, so you can use any picture from your gallery!</li>-->
-                    <!--                    <li>✓ You can also Add stickers to memes - a huge collection of stickers is available!</li>-->
-                    <!--                    <li>✓ Adjust text font family, color & size.</li>-->
-                    <!--                    <li>✓ Create complex memes with unlimited captions</li>-->
-                    <!--                    <li>✓ Move captions anywhere you want and add your own</li>-->
-                    <!--                    <li>✓ Smart Image Cropping tool available.</li>-->
-                    <!--                    <li>✓ Quick scroll and optional grid view for individual categories.</li>-->
-                    <!--                    <li>✓ Add borders to any image you want.</li>-->
-                    <!--                    <li>✓ SEARCH and find you favorite meme in seconds.</li>-->
-                    <!--                    <li>✓ Create your own list of favorite memes!</li>-->
-                    <!--                    <li>✓ Regularly updated memes to work with!</li>-->
-                    <!--                    <li>✓ Watermark free images. Claim what you created :)</li>-->
-                    <!--                    <li>✓ The app DOES NOT automatically upload any meme you create – your privacy is our top-->
-                    <!--                        priority!-->
-                    <!--                    </li>-->
-                    <!--                    <li>✓ Make funny pictures, cover photos, profile pictures quickly for your social media profile.-->
-                    <!--                    </li>-->
-                    <!---->
-                    <!--                </ul>-->
-                    <!---->
-                    <!--            </div>-->
-                    <!---->
-                    <!--        </div>-->
-                    <!---->
-                    <!--    </div>-->
 
-                    <!--        <div class="col-md-3">-->
-                    <center>
+                <center style="font-size:14px">
+
+                    With <b>Meme generator app</b> you can create the funniest memes and share them with your friends
+                    via
+                    Facebook,<br>
+                    Twitter, Instagram, WhatsApp, Messenger, Google+, E-mail, Dropbox, Drive, Snapchat etc.<br><br>
+
+
+                    <h3>What is the Meme Generator App?</h3><br>
+
+                    It's a free online <i>Meme generator app</i> that allows you to add custom resizable text to images.
+                    you
+                    can
+                    make
+                    images instantly. Most commonly, people use the app tp make meme but you can create any graphics
+                    like
+                    facebook
+                    cover
+                    photo,<br> Profile picturs or even business cards. you can also upload your own images as templates.
+                    <br><br>
+
+
+                    <br>
+                    A <a href="https://en.wikipedia.org/wiki/Meme">meme</a> is an idea, behavior, or style that spreads
+                    from
+                    person
+                    to
+                    person within a culture.[1] A meme acts as a unit for carrying cultural ideas, symbols,<br>
+                    or practices that can be transmitted from one mind to another through writing, speech, gestures,
+                    rituals, or
+                    other
+                    imitable phenomena with a mimicked theme.<br>
+                    Supporters of the concept regard memes as cultural analogues to genes in that they self-replicate,
+                    mutate, and
+                    respond to selective pressures.<br><br>
+
+                    <h4>Thanks for using <u>Meme maker app</u></h4>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-5">
+        <div class="container">
+            <div class="row">
+                <h3 class="bottom-heading">H3 GOES HERE FOR MORE INFORMATION</h3>
+            </div>
+            <div class="row container-5">
+                <center>
+                    <div class="col-md-3">
                         <div class="videoTutorial">
-                            <h1>Meme maker app</h1>
-                            Take a look at how the <b>Meme generator app</b> works :<br>
+                            <h3 class="videoH3" style="margin-top: 0">Meme maker app</h3>
+                            <p class="videoH3">Take a look at how the Meme generator app works :</p><br>
 
-                            <iframe width="60%" id="tutorialVideo" height="250"
+                            <iframe width="100%" id="tutorialVideo" height="250"
                                     src="https://www.youtube.com/embed/mYDqgWYsxRc" frameborder="0"
                                     allowfullscreen></iframe>
                             <p id="scrollTop"><a href="#creating">Click here to start creating memes</a></p>
                         </div>
-                    </center>
+                    </div>
+                </center>
+                <div class="col-md-4 col-md-offset-1 content-5-list">
+                    <b>Main features:</b>
+                    <br><br>
+
+                    <ul>
+
+                        <li>✓ Choose templates from Multiple meme categories.</li>
+                        <li>✓ 1000+ high quality memes with lots of example captions to choose from.</li>
+                        <li>✓ Quickly save memes and Share @ your favorite social media.</li>
+                        <li>✓ Custom memes supported, so you can use any picture from your gallery!</li>
+                        <li>✓ You can also Add stickers to memes - a huge collection of stickers is available!</li>
+                        <li>✓ Adjust text font family, color & size.</li>
+                        <li>✓ Create complex memes with unlimited captions</li>
+                        <li>✓ Move captions anywhere you want and add your own</li>
+                        <li>✓ Smart Image Cropping tool available.</li>
+                        <li>✓ Quick scroll and optional grid view for individual categories.</li>
+                        <li>✓ Add borders to any image you want.</li>
+                        <li>✓ SEARCH and find you favorite meme in seconds.</li>
+                        <li>✓ Create your own list of favorite memes!</li>
+                        <li>✓ Regularly updated memes to work with!</li>
+                        <li>✓ Watermark free images. Claim what you created :)</li>
+                        <li>✓ The app DOES NOT automatically upload any meme you create – your privacy is our top
+                            priority!
+                        </li>
+                        <li>✓ Make funny pictures, cover photos, profile pictures quickly for your social media profile.
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-md-offset-1 content-5-links">
+                    <b>List name 1</b>
+                    <ul>
+                        <li><a href="#">Results Driven Marketing</a></li>
+                        <li><a href="#">Advisory Concept Evolvers</a></li>
+                        <li><a href="#">SEO Link Express</a></li>
+                        <li><a href="#">Cibik and Cataldo</a></li>
+                        <li><a href="#">Paul & Paul</a></li>
+                        <li><a href="#">Alvin F. de Levie</a></li>
+                        <li><a href="#">Jordan Goldberg</a></li>
+                        <li><a href="#">News World</a></li>
+                    </ul>
+                    <br>
+
+                    <b>Other links</b>
+                    <ul>
+                        <li><a href="#">Know Your Meme</a></li>
+                        <li><a href="#">EBaums World</a></li>
+                        <li><a href="#">Cracked.com</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
+    <div class="container-fluid footer-1 footer-1-row">
+        <h1>Follow us on Social Media and See Your Meme: </h1>
+        <ul class="footer-1-list">
+            <li><a href="#"><img src="images/facebook-logo.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter-logo.png" alt=""></a></li>
+            <li><a href="#"><img src="images/linkedin-logo1.png" alt=""></a></li>
+            <li><a href="#"><img src="images/pinterest-logo.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram-logo.png" alt=""></a></li>
+        </ul>
+    </div>
 
     <footer>
-        <div class="container">
-
-            <center>
-
-                With <b>Meme generator app</b> you can create the funniest memes and share them with your friends via
-                Facebook,<br>
-                Twitter, Instagram, WhatsApp, Messenger, Google+, E-mail, Dropbox, Drive, Snapchat etc.<br><br>
-
-
-                <h3>What is the Meme Generator App?</h3><br>
-
-                It's a free online <i>Meme generator app</i> that allows you to add custom resizable text to images. you
-                can
-                make
-                images instantly. Most commonly, people use the app tp make meme but you can create any graphics like
-                facebook
-                cover
-                photo,<br> Profile picturs or even business cards. you can also upload your own images as templates.
-                <br><br>
-
-
-                <br>
-                A <a href="https://en.wikipedia.org/wiki/Meme">meme</a> is an idea, behavior, or style that spreads from
-                person
-                to
-                person within a culture.[1] A meme acts as a unit for carrying cultural ideas, symbols,<br>
-                or practices that can be transmitted from one mind to another through writing, speech, gestures,
-                rituals, or
-                other
-                imitable phenomena with a mimicked theme.<br>
-                Supporters of the concept regard memes as cultural analogues to genes in that they self-replicate,
-                mutate, and
-                respond to selective pressures.<br><br>
-
-                <h4>Thanks for using <u>Meme maker app</u></h4>
-            </center>
-        </div>
+        <p>Legal | Website Terms of Use | Licence Agencement | Privacy Policy</p>
+        <br>
+        <p>&copy;2018 COMPANY NAME HERE. All rights reserved.</p>
     </footer>
 </div>
 <a href="#" class="scrollup waves-effect waves-dark"><i class="fa fa-angle-up active"></i></a>
-<!-- Placed at the end of the document so the pages load faster -->
-<!--<script src="js/jquery.js"></script>-->
-<!--<script src="js/jquery.easing.1.3.js"></script>-->
-<!--<script src="materialize/js/materialize.min.js"></script>-->
 <script src="js/bootstrap.min.js"></script>
-<!--<script src="js/jquery.fancybox.pack.js"></script>-->
-<!--<script src="js/jquery.fancybox-media.js"></script>-->
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/animate.js"></script>
-<!-- Vendor Scripts -->
-<!--<script src="js/modernizr.custom.js"></script>-->
 <script src="js/jquery.isotope.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/animate.js"></script>
-<script src="js/custom.js"></script>
-
 
 </body>
 </html>

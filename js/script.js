@@ -38,28 +38,10 @@ jQuery(function() {
   });
 
 
-
-  $("#scrollDown").on("click","a", function (event) {
-      event.preventDefault();
-      var id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body').animate({scrollTop: top}, 1500);
-  });
-
   $("#scrollTop").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
       $('body').animate({scrollTop: top-150}, 1500);
   });
-
-  $("#anchorCreate").on("click","a", function (event) {
-      event.preventDefault();
-      var id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body').animate({scrollTop: top-150}, 1500);
-  });
-
-
-
 });
